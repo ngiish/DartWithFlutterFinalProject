@@ -1,31 +1,8 @@
-
 // import 'package:flutter/material.dart';
 // import 'package:provider/provider.dart';
 // import 'event_provider.dart';
 // import 'event.dart';
 // import 'package:table_calendar/table_calendar.dart';
-
-// void main() {
-//   runApp(
-//     ChangeNotifierProvider(
-//       create: (context) => EventProvider(),
-//       child: MyApp(),
-//     ),
-//   );
-// }
-
-// class MyApp extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       title: 'Event Planner',
-//       theme: ThemeData(
-//         primarySwatch: Colors.blue,
-//       ),
-//       home: EventPlannerScreen(),
-//     );
-//   }
-// }
 
 // class EventPlannerScreen extends StatefulWidget {
 //   @override
@@ -137,81 +114,6 @@ import 'event_provider.dart';
 import 'event.dart';
 import 'package:table_calendar/table_calendar.dart';
 
-void main() {
-  runApp(
-    ChangeNotifierProvider(
-      create: (context) => EventProvider(),
-      child: MyApp(),
-    ),
-  );
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Event Planner',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: HomePage(),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Home Page'),
-        centerTitle: true,
-      ),
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                'Welcome to the Event Planner',
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              SizedBox(height: 20),
-              Text(
-                'Plan your events efficiently and effectively.',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 16,
-                ),
-              ),
-              SizedBox(height: 40),
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => EventPlannerScreen()),
-                  );
-                },
-                child: Text('Get Started'),
-                style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
-                  textStyle: TextStyle(
-                    fontSize: 18,
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
 class EventPlannerScreen extends StatefulWidget {
   @override
   _EventPlannerScreenState createState() => _EventPlannerScreenState();
@@ -315,22 +217,3 @@ class _EventPlannerScreenState extends State<EventPlannerScreen> {
     );
   }
 }
-
-class Event {
-  final String title;
-  final DateTime date;
-
-  Event({required this.title, required this.date});
-}
-
-class EventProvider extends ChangeNotifier {
-  List<Event> _events = [];
-
-  List<Event> get events => _events;
-
-  void addEvent(Event event) {
-    _events.add(event);
-    notifyListeners();
-  }
-}
-
