@@ -10,6 +10,9 @@
 .svn/
 migrate_working_dir/
 
+#Ignore .env file(contains sensitive information)
+.env
+
 # IntelliJ related
 *.iml
 *.ipr

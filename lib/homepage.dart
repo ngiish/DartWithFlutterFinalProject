@@ -1,10 +1,12 @@
-import 'package:flutter/material.dart';
-import 'event_planner_screen.dart';
+import 'package:flutter/material.dart';//Import the Flutter material package
+import 'event_planner_screen.dart';//Import the EventPlannerScreen widget
 
+//Define a stateless widget for the home page
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //Scaffold provides the basic structure for the page including app bar and body
       appBar: AppBar(
         title: Text('Home Page'),
         centerTitle: true,
