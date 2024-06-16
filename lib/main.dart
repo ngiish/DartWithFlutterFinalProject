@@ -164,7 +164,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Page'),
+        title: Text('Casa Page'),
         centerTitle: true,
       ),
       body: Center(
@@ -174,7 +174,7 @@ class HomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Welcome to the Event Planner',
+                'Welcome to your favourite Event Planner',
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
@@ -182,7 +182,7 @@ class HomePage extends StatelessWidget {
               ),
               SizedBox(height: 20),
               Text(
-                'Plan your events efficiently and effectively.',
+                'Gain the allmighty power to plan your events efficiently and effectively.',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 16,
