@@ -1,6 +1,5 @@
-// login_service.dart
-
 import 'package:flutter/foundation.dart';
+import 'api_service.dart';
 
 class LoginService with ChangeNotifier {
   bool _isLoading = false; // Initial loading state
@@ -9,38 +8,34 @@ class LoginService with ChangeNotifier {
   bool get isLoading => _isLoading;
   bool get isAuthenticated => _isAuthenticated;
 
+  final ApiService _apiService = ApiService();
+
+
   // Simulate login process for demonstration
   Future<bool> login(String email, String password) async {
     // Simulate loading
     _isLoading = true;
     notifyListeners();
 
-    // Simulate authentication process
-    await Future.delayed(Duration(seconds: 2)); // Replace with actual auth logic
+    bool isAuthenticated = await _apiService.login(email, password);
 
-    // Check credentials (replace with actual authentication logic)
-    if (email == 'test@example.com' && password == 'password') {
-      _isAuthenticated = true;
-    } else {
-      _isAuthenticated = false;
-    }
-
-    _isLoading = false; // Done loading
+    _isLoading = false;
+    _isAuthenticated = isAuthenticated;
     notifyListeners();
 
-    return _isAuthenticated;
+    return isAuthenticated;
   }
 
   // Simulate signup process for demonstration
   Future<bool> signup(String email, String password) async {
-    // Simulate loading
+    // Simulate signup
     _isLoading = true;
     notifyListeners();
 
     // Simulate registration process
-    await Future.delayed(Duration(seconds: 2)); // Replace with actual registration logic
+    await Future.delayed(Duration(seconds: 2)); 
 
-    // For demo purposes, assume registration is successful if email and password are not empty
+    //Assume registration is successful if email and password are not empty
     bool registrationSuccessful = email.isNotEmpty && password.isNotEmpty;
 
     if (registrationSuccessful) {
