@@ -1,16 +1,50 @@
-# event_planner
+## Event Planner app
+The Event Planner App is a Flutter application that allows users to plan and manage their events efficiently. This application uses a Node.js backend with Express to handle event data and a MySQL database for data storage.
 
-A new Flutter project.
+
+## Author
+Isaac Mutiga
+
+## Features
+View events on a calendar.
+Add new events with title and description.
+View a list of events for the selected day.
+Persist event data using a backend server with MySQL.
 
 ## Getting Started
+To start using the Event Manager App, follow these steps:
 
-This project is a starting point for a Flutter application.
+1. Clone the repository:
+git clone git@github.com:ngiish/DartWithFlutterFinalProject.git
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+2. Navigate to the project directory:
+cd DartWithFlutterFinalProject
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+3. **Install dependencies:** 
+flutter pub get # Install all the dependencies that work with flutter
+npm install # Install the other app dependencies
+
+
+
+4. Configure environment variables:
+- Set up environment variables for database connection, API keys, etc.
+
+5. Start the Flutter app:
+
+     Flutter run
+
+6. Start the node.js development server:
+
+     (1)npm start
+
+
+7. Access the application via [http://localhost:3000](http://localhost:3000) in your browser.
+
+
+## Technologies Used
+Dart 
+Flutter
+Node.js
+MySQL
