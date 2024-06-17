@@ -31,7 +31,7 @@ npm install # Install the other app dependencies
 4. Configure environment variables:
 - Set up environment variables for database connection, API keys, etc.
 
-5. Start the Flutter app:
+5. Start the Flutter app/run the app:
 
      Flutter run
 
