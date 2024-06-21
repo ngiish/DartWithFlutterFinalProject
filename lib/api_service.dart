@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 // Define a class for API service interactions
 class ApiService {
   // Base URL for the API
-  final String _baseUrl = 'http://localhost:3000';
+  final String _baseUrl = 'http://127.0.0.1:3306';
 
   // Method for user login
   Future<bool> login(String email, String password) async {
