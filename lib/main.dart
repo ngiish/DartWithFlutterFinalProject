@@ -1,3 +1,4 @@
+//Entry point of the application
 // main.dart
 //Import the necessary packages to be used
 
@@ -6,9 +7,6 @@ import 'package:provider/provider.dart';
 import 'login_service.dart'; // Import your LoginService
 import 'signup_page.dart'; // Import your SignupPage
 import 'event_provider.dart'; // Custom provider for managing event data
-import 'event.dart'; // Event model class
-import 'package:table_calendar/table_calendar.dart'; // Calendar package
-import 'login_page.dart'; // Import the LoginPage
 
 void main() {
   runApp(

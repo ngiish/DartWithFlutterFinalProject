@@ -1,3 +1,4 @@
+//The code here helps create a service to handle API calls
 //Creation of a service to fetch data
 import 'dart:convert';
 import 'package:http/http.dart' as http;

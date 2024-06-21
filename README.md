@@ -42,9 +42,24 @@ npm install # Install the other app dependencies
 
 7. Access the application via [http://localhost:3000](http://localhost:3000) in your browser.
 
+-To check whether the MySQL server is running/status of the server:
+      (1)sudo service mysql status
 
 ## Technologies Used
 Dart 
 Flutter
 Node.js
 MySQL
+
+## Key Components
+
+# Frontend:
+
+- Flutter: Utilized for creating the user interface. Flutter allows for a seamless and responsive design, making the app user-friendly and visually appealing.
+- State Management: Provider package is used for state management, ensuring that the app state is managed efficiently and changes are propagated correctly across the app.
+
+# Backend:
+
+- Node.js: Serves as the backend server, handling HTTP requests from the Flutter app and interacting with the MySQL database.
+- Express.js: Used to create RESTful API endpoints for CRUD operations on the event data.
+- MySQL: Database for storing event details, including titles, descriptions

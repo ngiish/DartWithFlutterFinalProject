@@ -5,7 +5,7 @@ class Event {
   final String title;
   final String description;
   final DateTime date;
-  final String createdBy;
+  final String createdBy;//user ID of the creator
 
   Event({
     required this.id, 

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'event_provider.dart';
-import 'event.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 class EventPlannerScreen extends StatefulWidget {
@@ -88,6 +86,9 @@ class _EventPlannerScreenState extends State<EventPlannerScreen> {
   }
 
   void _addEventDialog(BuildContext context) {
+     final TextEditingController _eventController = TextEditingController();
+     final TextEditingController _descriptionController = TextEditingController();
+
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
